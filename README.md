@@ -96,8 +96,6 @@ return_book_name VARCHAR(75),
 return_date DATE,
 return_book_isbn VARCHAR(20)
 );
-
-
 ```
 ```sql
 ### SETTING UP FOREIGN KEY AND PRIMARY KEY IN EACH TABLE TO CREATE AN ERD DIAGRAM
@@ -135,6 +133,7 @@ REFERENCES issue_status(issued_id);
 - **Delete**: Removed records from the `members` table as needed.
 
 **Task 1. Create a New Book Record**
+```sql
 INSERT INTO books(isbn, book_title, category, rental_price, status, author, publisher)
 VALUES
 ('976-1-60129-456-2', 'To Kill a Mockingbird', 'Classic', 6.00, 'yes', 'Harper Lee', 'J.B. Lippincott & Co.');
